@@ -1,0 +1,39 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix props: <https://w3id.org/props#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix beo: <http://pi.pauwel.be/voc/buildingelement#> .
+@prefix hmo: <https://example.org#> .
+@prefix inst: <https://example.org#> .
+@prefix mat: <https://bimerr.iot.linkeddata.es/def/material-properties/> .
+@prefix dot: <https://alhakam.github.io/dot/> .
+@prefix IFCmapping: <https://example.org/IFCmapping#> .
+@prefix oop: <https://example.org/oop#> .
+@prefix ifcowl: <http://www.buildingsmart-tech.org/ifcOWL/IFC4#> .
+
+oop:OutOfPlane
+    a oop:Mechanism ;
+    rdfs:comment """The mechanism manifests itself through the rigid rotation of entire facades or portions of walls with respect to axes that are predominantly 
+horizontal at the base of them and running through the wall structure stressed by out-of-plane actions.""" .
+
+inst:WallDamage_417_a_d1
+    a dot:StructuralDamage ;
+    a oop:Synthom ;
+    bot:elementProperty inst:Wall_417_a ;
+    dot:hasCausation inst:OutOfPlane ;
+    IFCmapping:hasGUID "1X$OUR9g1CHfK5GgP8di3c"^^xsd:string .
+
+inst:Wall_417_a
+    a bot:Element ;
+    a beo:Wall ;
+    a ifcowl:IfcWall;
+    mat:hasMaterial inst:Masonry1 ;
+    dot:hasDamagedElement inst:WallDamage_417_a1 ;
+    IFCmapping:hasGUID "16koIgeXDBuBWPnfQFuTr9"^^xsd:string .
+
+
+
+
+
