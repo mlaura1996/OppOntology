@@ -12,6 +12,7 @@
 @prefix IFCmapping: <https://example.org/IFCmapping#> .
 @prefix oop: <https://example.org/oop#> .
 @prefix ifcowl: <http://www.buildingsmart-tech.org/ifcOWL/IFC4#> .
+@prefix bpt:   	<https://w3id.org/bpt#> .
 
 oop:OutOfPlane
     a oop:Mechanism ;
@@ -31,7 +32,7 @@ inst:Wall_417_a
     a ifcowl:IfcWall;
     mat:hasMaterial inst:Masonry1 ;
     dot:hasDamagedElement inst:WallDamage_417_a1 ;
-    IFCmapping:hasGUID "16koIgeXDBuBWPnfQFuTr9"^^xsd:string .
+    bpt:hasGUID "413b2296-9449-4a05-8f3c-f009b9f294dc" .
 
 
 
